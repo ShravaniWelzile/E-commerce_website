@@ -1,8 +1,12 @@
 import React from "react";
 
-
 function Cart({ cart, removeFromCart }) {
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
+    const handlePayment = () => {
+        // Mock payment function
+        alert(`Payment of $${totalPrice} successful!`);
+    };
 
     return (
         <div className="cart">
@@ -20,6 +24,9 @@ function Cart({ cart, removeFromCart }) {
                 </ul>
             )}
             <h3>Total: ${totalPrice}</h3>
+            {cart.length > 0 && (
+                <button onClick={handlePayment}>Proceed to Payment</button>
+            )}
         </div>
     );
 }
