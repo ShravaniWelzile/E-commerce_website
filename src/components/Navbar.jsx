@@ -15,21 +15,11 @@ function Navbar({ user }) {
             <div className="nav-links" style={{ color: "white" }}>
                 <Link to="/home" className="nav-link">Home</Link>
                 <b> | </b>
-                <Link to="/cart" className="nav-link">Cart ({cartCount})</Link>
-                <b> | </b>
-                {user ? (
-                    <img
-                        src={user.profilePic || "default-profile.png"}
-                        alt="Profile"
-                        className="profile-pic"
-                    />
-                ) : (
-                    <Link to="/login" className="nav-link">Login</Link>
-                )}
+                <Link to="/cart" className="nav-link">Cart</Link>
                 <b> | </b>
                 <Link to="/account" className="nav-link">Account</Link>
                 <b> | </b>
-                <Link to="/help" className="nav-link">Help</Link>
+                <Link to="/help" className="nav-link">About</Link>
             </div>
             <div className="cart-icon">
                 🛒 Cart: <span>{cartCount}</span>
