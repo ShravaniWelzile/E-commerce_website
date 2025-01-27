@@ -1,4 +1,3 @@
-// server.js
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -17,7 +16,7 @@ app.use(cors());
 // For parsing JSON data
 app.use("/api", productRoutes);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5173;
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {})
